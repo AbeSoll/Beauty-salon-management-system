@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2021 at 02:26 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Generation Time: Jul 02, 2024 at 03:11 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +40,7 @@ CREATE TABLE `tblappointment` (
   `Remark` varchar(250) NOT NULL,
   `Status` varchar(50) NOT NULL,
   `RemarkDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblappointment`
@@ -51,9 +51,10 @@ INSERT INTO `tblappointment` (`ID`, `AptNumber`, `Name`, `Email`, `PhoneNumber`,
 (3, '965887988', 'Jain Gloria', 'gloria@gmail.com', 5646464646, '6/20/2021', '2:30pm', 'Loreal Hair Color(Full)', '2021-06-19 12:35:30', 'we will wait', '1', '2021-06-19 13:37:39'),
 (6, '621107928', 'Tracy Peace', 'peace@gmail.com', 1234567890, '6/27/2021', '1:30am', 'Rebonding', '2021-06-21 16:22:25', 'Testing', '2', '2021-06-21 16:24:10'),
 (7, '252539813', 'Don Williams', 'williams@gmail.com', 770546590, '06/18/2021', '3:00pm', 'Layer Haircut', '2021-06-12 10:25:50', 'well accepted', '1', '2021-07-24 12:18:39'),
-(8, '402172811', 'Tracy Peace', 'peace@gmail.com', 770546590, '11/06/2021', '12:30am', 'U-Shape Hair Cut', '2021-06-18 07:18:00', '', '', '2021-07-09 15:56:26'),
+(8, '402172811', 'Tracy Peace', 'peace@gmail.com', 770546590, '11/06/2021', '12:30am', 'U-Shape Hair Cut', '2021-06-18 07:18:00', 'done ', '1', '2024-07-02 01:03:42'),
 (10, '747579846', 'Don Williams', 'williams@gmail.com', 770546590, '7/5/2021', '12:30am', 'Deluxe Menicure', '2021-07-02 22:16:42', '', '', '2021-07-09 15:52:55'),
-(11, '924501752', 'Sulaita Vernela', 'vernela@gmail.com', 770546590, '7/7/2021', '12:30am', 'U-Shape Hair Cut', '2021-07-02 22:45:27', '', '', '2021-07-09 15:59:25');
+(11, '924501752', 'Sulaita Vernela', 'vernela@gmail.com', 770546590, '7/7/2021', '12:30am', 'U-Shape Hair Cut', '2021-07-02 22:45:27', '111', '1', '2024-07-02 08:19:03'),
+(12, '771000149', 'soll', 'soll@gmail.com', 177353011, '7/2/2024', '3:00pm', 'Deluxe Menicure', '2024-07-02 08:24:45', 'accept', '1', '2024-07-02 08:29:16');
 
 -- --------------------------------------------------------
 
@@ -70,14 +71,13 @@ CREATE TABLE `tblcustomers` (
   `Details` mediumtext DEFAULT NULL,
   `CreationDate` timestamp NULL DEFAULT current_timestamp(),
   `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblcustomers`
 --
 
 INSERT INTO `tblcustomers` (`ID`, `Name`, `Email`, `MobileNumber`, `Gender`, `Details`, `CreationDate`, `UpdationDate`) VALUES
-(1, 'Sulaita Vernela', 'vernela@gmail.com', 5546464646, 'Male', 'From California', '2019-07-26 11:09:10', '2021-07-09 15:10:37'),
 (2, 'Don Williams', 'williams@gmail.com', 5565565656, 'Male', 'from Canada', '2019-07-26 11:10:02', '2021-07-09 15:11:10'),
 (3, 'Tracy Peace', 'peace@gmail.com', 789465990, 'Female', 'Taking massage', '2019-07-26 11:10:28', '2021-07-09 15:35:28'),
 (4, ' Jain Gloria', 'gloria@gmail.com', 5646464646, 'Female', 'from California', '2019-08-19 13:38:58', '2021-07-09 15:12:19');
@@ -94,7 +94,7 @@ CREATE TABLE `tblinvoice` (
   `ServiceId` int(11) DEFAULT NULL,
   `BillingId` int(11) DEFAULT NULL,
   `PostingDate` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblinvoice`
@@ -111,7 +111,9 @@ INSERT INTO `tblinvoice` (`id`, `Userid`, `ServiceId`, `BillingId`, `PostingDate
 (37, 1, 4, 372872256, '2021-07-09 15:43:52'),
 (38, 2, 1, 361165436, '2021-07-24 11:52:27'),
 (39, 2, 2, 361165436, '2021-07-24 11:52:27'),
-(40, 2, 3, 361165436, '2021-07-24 11:52:27');
+(40, 2, 3, 361165436, '2021-07-24 11:52:27'),
+(41, 1, 1, 612048446, '2024-07-02 01:08:00'),
+(42, 1, 2, 612048446, '2024-07-02 01:08:00');
 
 -- --------------------------------------------------------
 
@@ -124,7 +126,7 @@ CREATE TABLE `tblservices` (
   `ServiceName` varchar(200) DEFAULT NULL,
   `Cost` int(10) DEFAULT NULL,
   `CreationDate` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblservices`
@@ -162,15 +164,16 @@ CREATE TABLE `tblusers` (
   `mobile` int(11) NOT NULL,
   `userimage` varchar(255) NOT NULL DEFAULT 'but.jpg',
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblusers`
 --
 
 INSERT INTO `tblusers` (`id`, `name`, `lastname`, `username`, `email`, `sex`, `permission`, `password`, `mobile`, `userimage`, `status`) VALUES
-(15, 'John', 'Simith ', 'admin', 'john@gmail.com', 'Male', 'Super User', '81dc9bdb52d04dc20036dbd8313ed055', 770546590, 'face19.jpg', 1),
-(21, 'Arinaitwe', 'Gerald', 'gerald', 'gerald@gmail.com', 'Male', 'Admin', '81dc9bdb52d04dc20036dbd8313ed055', 770546590, 'but.jpg', 0);
+(15, 'John', 'Simith ', 'admin', 'john@gmail.com', 'Male', 'Manager', '81dc9bdb52d04dc20036dbd8313ed055', 770546590, 'face19.jpg', 1),
+(21, 'Arinaitwe', 'Gerald', 'gerald', 'gerald@gmail.com', 'Male', 'Admin', '81dc9bdb52d04dc20036dbd8313ed055', 770546590, 'but.jpg', 0),
+(22, 'AHMAD SOLEHIN', 'BIN ASMADI', 'solehin', 'solehinahmad954@gmail.com', 'Male', 'Staff/Barber', '81dc9bdb52d04dc20036dbd8313ed055', 177353011, 'but.jpg', 1);
 
 --
 -- Indexes for dumped tables
@@ -215,7 +218,7 @@ ALTER TABLE `tblusers`
 -- AUTO_INCREMENT for table `tblappointment`
 --
 ALTER TABLE `tblappointment`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tblcustomers`
@@ -227,7 +230,7 @@ ALTER TABLE `tblcustomers`
 -- AUTO_INCREMENT for table `tblinvoice`
 --
 ALTER TABLE `tblinvoice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `tblservices`
@@ -239,7 +242,7 @@ ALTER TABLE `tblservices`
 -- AUTO_INCREMENT for table `tblusers`
 --
 ALTER TABLE `tblusers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
