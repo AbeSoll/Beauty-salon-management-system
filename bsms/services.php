@@ -7,13 +7,14 @@ if(isset($_POST['submit']))
 
 	$name=$_POST['name'];
 	$email=$_POST['email'];
+	$barber=$_POST['barber'];
 	$services=$_POST['services'];
 	$adate=$_POST['adate'];
 	$atime=$_POST['atime'];
 	$phone=$_POST['phone'];
 	$aptnumber = mt_rand(100000000, 999999999);
 
-	$query=mysqli_query($con,"insert into tblappointment(AptNumber,Name,Email,PhoneNumber,AptDate,AptTime,Services) value('$aptnumber','$name','$email','$phone','$adate','$atime','$services')");
+	$query=mysqli_query($con,"insert into tblappointment(AptNumber,Name,Email,BarberName,PhoneNumber,AptDate,AptTime,Services) value('$aptnumber','$name','$email','$barber','$phone','$adate','$atime','$services')");
 	if ($query) 
 	{
 		echo "<script>alert('Thank you for booking, your appointment number is $aptnumber, we will give you phone call shortly.');</script>";  		
