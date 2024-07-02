@@ -102,82 +102,100 @@ if (strlen($_SESSION['sid']==0)) {
                   </thead> 
                   <tbody>
                     <?php
-                    $ret=mysqli_query($con,"select *from  tblcustomers");
-                    $cnt=1;
-                    while ($row=mysqli_fetch_array($ret)) {
-
+                    $ret = mysqli_query($con, "select *from tblcustomers");
+                    $cnt = 1;
+                    while ($row = mysqli_fetch_array($ret)) {
                       ?>
-
                       <tr> 
-                        <th scope="row"><?php echo $cnt;?></th> 
-                        <td><?php  echo $row['Name'];?></td> 
-                        <td><?php  echo $row['MobileNumber'];?></td>
-                        <td><?php  echo $row['CreationDate'];?></td> 
+                        <th scope="row"><?php echo $cnt; ?></th> 
+                        <td><?php echo $row['Name']; ?></td> 
+                        <td><?php echo $row['MobileNumber']; ?></td>
+                        <td><?php echo $row['CreationDate']; ?></td> 
                         <td>
-                          <a href="#" class=" btn btn-sm btn-primary edit_data" id="<?php echo  $row['ID']; ?>" title="click for edit">Edit</a>
-                          <a href="#" class=" btn btn-sm btn-info edit_data2" id="<?php echo  $row['ID']; ?>" title="assign services">Assign Services</a></td> 
-                        </tr>   
-                        <?php 
-                        $cnt=$cnt+1;
-                      }?>
-                    </tbody>
-                  </table>
-                </div>
-                <!-- /.card-body -->
+                          <a href="#" class="btn btn-sm btn-primary edit_data" id="<?php echo $row['ID']; ?>" title="click for edit">Edit</a>
+                          <a href="#" class="btn btn-sm btn-info edit_data2" id="<?php echo $row['ID']; ?>" title="assign services">Assign Services</a>
+                          <a href="#" class="btn btn-sm btn-danger delete_data" id="<?php echo $row['ID']; ?>" title="click for delete">Delete</a>
+                        </td>
+                      </tr>   
+                      <?php 
+                      $cnt = $cnt + 1;
+                    } ?>
+                  </tbody>
+                </table>
               </div>
-              <!-- /.card -->
+              <!-- /.card-body -->
             </div>
-            <!-- /.col -->
+            <!-- /.card -->
           </div>
-          <!-- /.row -->
+          <!-- /.col -->
         </div>
-        <!-- /.container-fluid -->
-      </section>
-      <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-    <?php @include("includes/footer.php"); ?>
-
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
   </div>
+  <!-- /.content-wrapper -->
+  <?php @include("includes/footer.php"); ?>
 
-  <!-- ./wrapper -->
-  <?php @include("includes/foot.php"); ?>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $(document).on('click','.edit_data',function(){
-        var edit_id=$(this).attr('id');
-        $.ajax({
-          url:"edit_customer.php",
-          type:"post",
-          data:{edit_id:edit_id},
-          success:function(data){
-            $("#info_update").html(data);
-            $("#editData").modal('show');
-          }
-        });
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+
+<!-- ./wrapper -->
+<?php @include("includes/foot.php"); ?>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(document).on('click', '.edit_data', function() {
+      var edit_id = $(this).attr('id');
+      $.ajax({
+        url: "edit_customer.php",
+        type: "post",
+        data: {edit_id: edit_id},
+        success: function(data) {
+          $("#info_update").html(data);
+          $("#editData").modal('show');
+        }
       });
     });
-  </script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $(document).on('click','.edit_data2',function(){
-        var edit_id=$(this).attr('id');
-        $.ajax({
-          url:"assign_services.php",
-          type:"post",
-          data:{edit_id:edit_id},
-          success:function(data){
-            $("#info_update2").html(data);
-            $("#editData2").modal('show');
-          }
-        });
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(document).on('click', '.edit_data2', function() {
+      var edit_id = $(this).attr('id');
+      $.ajax({
+        url: "assign_services.php",
+        type: "post",
+        data: {edit_id: edit_id},
+        success: function(data) {
+          $("#info_update2").html(data);
+          $("#editData2").modal('show');
+        }
       });
     });
-  </script>
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(document).on('click', '.delete_data', function() {
+      var delete_id = $(this).attr('id');
+      if(confirm("Are you sure you want to delete this customer?")) {
+        $.ajax({
+          url: "delete_customer.php",
+          type: "post",
+          data: {delete_id: delete_id},
+          success: function(data) {
+            alert(data);
+            location.reload();
+          }
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>
