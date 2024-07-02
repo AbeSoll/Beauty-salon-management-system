@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Beauty Salon Management System</title>
+  <title>Mankraft Barbershop Management System</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
@@ -48,22 +48,22 @@
         <div class="w-100"></div>
         <div class="col-md-3 d-flex">
          <div class="dbox">
-           <p><span>Address:</span> 12th Street, Luthuli Avenue Calfornia</p>
+           <p><span>Address:</span> No 37, Jalan Sentral 2, Taman Nusa Sentral, 81550 Iskandar  Puteri, Johor</p>
          </div>
        </div>
        <div class="col-md-3 d-flex">
          <div class="dbox">
-           <p><span>Phone:</span> <a href="tel://1234567920">+ 1212 2345 92</a></p>
+           <p><span>Phone:</span> <a href="tel://1234567920">+ 011-23459244</a></p>
          </div>
        </div>
        <div class="col-md-3 d-flex">
          <div class="dbox">
-           <p><span>Email:</span> <a href="mailto:info@.com">code4berryteam@gmail.com</a></p>
+           <p><span>Email:</span> <a href="mailto:info@.com">mankraftbarber@gmail.com</a></p>
          </div>
        </div>
        <div class="col-md-3 d-flex">
          <div class="dbox">
-           <p><span>Website:</span> <a href="https://code4berry.com">code4berry.com</a></p>
+           <p><span>Website:</span> <a href="https://code4berry.com">mankraftbarber.com</a></p>
          </div>
        </div>
      </div>

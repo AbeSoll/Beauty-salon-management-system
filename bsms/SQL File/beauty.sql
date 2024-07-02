@@ -131,18 +131,19 @@ CREATE TABLE `tblservices` (
 --
 
 INSERT INTO `tblservices` (`ID`, `ServiceName`, `Cost`, `CreationDate`) VALUES
-(1, 'O3 Facial', 1200, '2019-07-25 11:22:38'),
-(2, 'Fruit Facial', 500, '2019-07-25 11:22:53'),
-(3, 'Charcol Facial', 1000, '2019-07-25 11:23:10'),
-(4, 'Deluxe Menicure', 500, '2019-07-25 11:23:34'),
-(5, 'Deluxe Pedicure', 600, '2019-07-25 11:23:47'),
-(6, 'Normal Menicure', 300, '2019-07-25 11:24:01'),
-(7, 'Normal Pedicure', 400, '2019-07-25 11:24:19'),
-(8, 'U-Shape Hair Cut', 250, '2019-07-25 11:24:38'),
-(9, 'Layer Haircut', 550, '2019-07-25 11:24:53'),
-(10, 'Rebonding', 300, '2019-07-25 11:25:08'),
-(11, 'Loreal Hair Color(Full)', 1200, '2019-07-25 11:25:35'),
-(12, 'Body Spa', 1500, '2019-08-19 13:36:27');
+(1, 'Beard and Mustache Trim', 20, '2019-07-25 11:22:38'),
+(2, 'Cuts and Fades', 30, '2019-07-25 11:22:53'),
+(3, 'Facials', 40, '2019-07-25 11:23:10'),
+(4, 'Hair Coloring and Gray Blending', 50, '2019-07-25 11:23:34'),
+(5, 'Professional Braiding', 40, '2019-07-25 11:23:47'),
+(6, 'Scalp Massage and Conditioning Treatment', 35, '2019-07-25 11:24:01'),
+(7, 'Straight Razor Shave', 25, '2019-07-25 11:24:19'),
+(8, 'Waxing and Hair Removal', 30, '2019-07-25 11:24:38'),
+(9, 'U-Shape Haircut', 20, '2019-07-25 11:24:53'),
+(10, 'Layered Haircut', 35, '2019-07-25 11:25:08'),
+(11, 'Precision Cut', 25, '2019-07-25 11:25:35'),
+(12, 'Clean & Very Short Hair', 15, '2019-08-19 13:36:27');
+
 
 -- --------------------------------------------------------
 

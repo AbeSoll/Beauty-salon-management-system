@@ -30,7 +30,7 @@ if(isset($_POST['submit']))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Beauty Salon Management System</title>
+	<title>Mankraft Barbershop Management System</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
