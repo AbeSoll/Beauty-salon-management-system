@@ -30,7 +30,7 @@ if(isset($_POST['submit']))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Beauty Salon Management System</title>
+	<title>Mankraft Management System</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -65,8 +65,8 @@ if(isset($_POST['submit']))
 					<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
 						<div class="col-md-12 ftco-animate">
 							<div class="text w-100 mt-5 text-center">
-								<span class="subheading">Beauty Salon</span>
-								<h2 style="color: #ffffff; font-size: 70px;">Serving Since 1995</h2>
+								<span class="subheading">Mankraft Barbershop</span>
+								<h2 style="color: #ffffff; font-size: 70px;">Modern & Fashionable</h2>
 							</div>
 						</div>
 					</div>
@@ -79,8 +79,8 @@ if(isset($_POST['submit']))
 					<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
 						<div class="col-md-12 ftco-animate">
 							<div class="text w-100 mt-5 text-center">
-								<span class="subheading">Beauty Salon</h2></span>
-								<h2 style="color: #ffffff; font-size: 70px;">Best Latest Fashions</h2>
+								<span class="subheading">Mankraft Barbershop</h2></span>
+								<h2 style="color: #ffffff; font-size: 70px;">Best Latest Hairstyles</h2>
 							</div>
 						</div>
 					</div>
@@ -162,11 +162,11 @@ if(isset($_POST['submit']))
 							<div class="heading-section mt-5 mb-4">
 								<div class="pl-lg-3 ml-md-5">
 									<span class="subheading">About</span>
-									<h2 class="mb-4">Welcome to Beauty Saloon</h2>
+									<h2 class="mb-4">Welcome to Mankraft Barbershop</h2>
 								</div>
 							</div>
 							<div class="pl-lg-3 ml-md-5">
-								<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+								<p>At Mankraft, we believe every haircut is a journey to confidence and style. Our barbers are artisans dedicated to crafting the perfect look for each client. Step into our shop and you'll find a relaxing, welcoming atmosphere where tradition meets modern technique. We take pride in every cut, trim, and shave, ensuring you leave feeling fresh and looking your best. Visit Mankraft Barbershop, where your style comes to life.</p>
 							</div>
 						</div>
 					</div>
@@ -175,13 +175,13 @@ if(isset($_POST['submit']))
 		</div>
 	</section>
 
-	<section class="ftco-section ftco-intro" style="background-image: url(images/saloncover2.jpg);">
+	<section class="ftco-section ftco-intro" style="background-image: url(images/back1.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<span>Now Booking</span>
-					<h2>Beautiful fashions &amp; Happy Hours</h2>
+					<h2>Great Haircut & Premium Quality</h2>
 				</div>
 			</div>
 		</div>
@@ -191,15 +191,15 @@ if(isset($_POST['submit']))
 		<div class="container">
 			<div class="row d-flex">
 				<div class="col-md-6 d-flex">
-					<div class="img img-2 w-100 mr-md-2" style="background-image: url(images/services-1.jpg);">
+					<div class="img img-2 w-100 mr-md-2" style="background-image: url(images/hair.jpg);">
 						
 					</div>
 				</div>
 				<div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
 					<div class="heading-section ftco-animate mb-5">
 						<span class="subheading">This is our secrets</span>
-						<h2 class="mb-4">Perfect fashions</h2>
-						<p>Our main focus is on quality and hygiene. Our Parlour is well equipped with advanced technology equipments and provides best quality services. Our staff is well trained and experienced, offering advanced services in Skin, Hair and Body Shaping that will provide you with a luxurious experience that leave you feeling relaxed and stress free. The specialities in the parlour are, apart from regular bleachings and Facials, many types of hairstyles, Bridal and cine make-up and different types of Facials & fashion hair colourings.
+						<h2 class="mb-4">Perfect Hairstyles</h2>
+						<p>Our main focus is on quality. Equipped with advanced technology, we provide top-notch services in haircut. Our well-trained and experienced staff ensure a luxurious experience that leaves you relaxed and stress-free. We specialize in a variety of services, including haircuts, shaves, facials and fashion hair dye. At Mankraft Barbershop, we pride ourselves on delivering exceptional care and style tailored to your needs.
 						</p>
 					</div>
 				</div>
@@ -211,26 +211,26 @@ if(isset($_POST['submit']))
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-7 text-center heading-section ftco-animate">
-					<span class="subheading">Fashions</span>
-					<h2 class="mb-4">Recent Fashions</h2>
+					<span class="subheading">Haircut</span>
+					<h2 class="mb-4">Trendings Looks</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="#" class="block-20" style="background-image: url('images/salon.jpg');">
+						<a href="#" class="block-20" style="background-image: url('images/Slick-Back-2.jpg');">
 						</a>
 					</div>
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="#" class="block-20" style="background-image: url('images/work-7.jpg');">
+						<a href="#" class="block-20" style="background-image: url('images/Crew-Cut-French-Crop-2.jpg');">
 						</a>
 					</div>
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="#" class="block-20" style="background-image: url('images/salon3.jpg');">
+						<a href="#" class="block-20" style="background-image: url('images/Quiff-Mohawk-Spik-1.jpg');">
 						</a>
 					</div>
 				</div>
@@ -238,19 +238,19 @@ if(isset($_POST['submit']))
 			<div class="row">
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="#" class="block-20" style="background-image: url('images/salon4.jpg');">
+						<a href="#" class="block-20" style="background-image: url('images/BALD-FADE-2.jpg');">
 						</a>
 					</div>
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="#" class="block-20" style="background-image: url('images/salon7.jpg');">
+						<a href="#" class="block-20" style="background-image: url('images/Quiff-Mohawk-Spik-3.jpg');">
 						</a>
 					</div>
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="#" class="block-20" style="background-image: url('images/salon6.jpg');">
+						<a href="#" class="block-20" style="background-image: url('images/Slick-Back-4.jpg');">
 						</a>
 					</div>
 				</div>
@@ -262,7 +262,7 @@ if(isset($_POST['submit']))
 		<div class="container py-5">
 			<div class="row py-2">
 				<div class="col-md-12 text-center">
-					<h2>We Make Beauty &amp; Latest Designs</h2>
+					<h2>Your Friendly Neighbourhood Barbershop</h2>
 					<a href="services.php" class="btn btn-white btn-outline-white">Book Now</a>
 				</div>
 			</div>

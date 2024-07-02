@@ -44,13 +44,13 @@
  <div class="container">
   <div class="row d-flex">
     <div class="col-md-6 d-flex">
-     <div class="img img-2 w-100 mr-md-2" style="background-image: url(images/services-1.jpg);"></div>
+     <div class="img img-2 w-100 mr-md-2" style="background-image: url(images/hair.jpg);"></div>
    </div>
    <div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
      <div class="heading-section ftco-animate mb-5">
       <span class="subheading">This is our secrets</span>
-      <h2 class="mb-4">Perfect fashions</h2>
-      <p>Our main focus is on quality and hygiene. Our Parlour is well equipped with advanced technology equipments and provides best quality services. Our staff is well trained and experienced, offering advanced services in Skin, Hair and Body Shaping that will provide you with a luxurious experience that leave you feeling relaxed and stress free. The specialities in the parlour are, apart from regular bleachings and Facials, many types of hairstyles, Bridal and cine make-up and different types of Facials & fashion hair colourings.
+      <h2 class="mb-4">Perfect Hairstyles</h2>
+      <p>Our main focus is on quality. Equipped with advanced technology, we provide top-notch services in haircut. Our well-trained and experienced staff ensure a luxurious experience that leaves you relaxed and stress-free. We specialize in a variety of services, including haircuts, shaves, facials and fashion hair dye. At Mankraft Barbershop, we pride ourselves on delivering exceptional care and style tailored to your needs.
       </p>
       <p><a href="#" class="btn btn-primary">Learn more</a></p>
     </div>
@@ -106,7 +106,7 @@
  <div class="container py-5">
   <div class="row py-2">
    <div class="col-md-12 text-center">
-    <h2>We Make Beauty &amp; Latest designs</h2>
+    <h2>Great Haircut & Premium Quality</h2>
     <a href="services.php" class="btn btn-white btn-outline-white">Book Now</a>
   </div>
 </div>
