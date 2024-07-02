@@ -2,8 +2,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="dashboard.php" class="brand-link">
-    <img src="company/logo.png" alt="Beauty salon" class="brand-image img-circle elevation-3" style="opacity: .8">
-    <span class="brand-text font-weight-light">Beauty Saloon</span>
+    <img src="company/logo.png" alt="Mankraft Barbershop" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">Mankraft Barbershop</span>
   </a>
 
   <!-- Sidebar -->
