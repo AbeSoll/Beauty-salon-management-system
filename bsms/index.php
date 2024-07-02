@@ -166,7 +166,7 @@ if(isset($_POST['submit']))
 								</div>
 							</div>
 							<div class="pl-lg-3 ml-md-5">
-								<p>At Mankraft, we believe every haircut is a journey to confidence and style. Our barbers are artisans dedicated to crafting the perfect look for each client. Step into our shop and you'll find a relaxing, welcoming atmosphere where tradition meets modern technique. We take pride in every cut, trim, and shave, ensuring you leave feeling fresh and looking your best. Visit Mankraft Barbershop, where your style comes to life.</p>
+								<p>Mankraft Barbershop is a modern and fashionable facility in a busy urban area that specializes in high-quality men's grooming services. We specialize in haircuts, beard trims, shaves, and styling, and our services are tailored to the modern man's lifestyle. Our barbershop takes pleasure in providing personalized experiences, excellent barbering techniques, and an inviting environment that makes each client feel cherished and relaxed..</p>
 							</div>
 						</div>
 					</div>

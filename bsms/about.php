@@ -67,8 +67,8 @@
       <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
         <div class="block-18">
           <div class="text">
-            <strong class="number" data-number="50">0</strong>
-            <span>Fashions</span>
+            <strong class="number" data-number="20">0</strong>
+            <span>Hairstyles</span>
           </div>
         </div>
       </div>
@@ -83,16 +83,16 @@
       <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
         <div class="block-18">
           <div class="text">
-            <strong class="number" data-number="50">0</strong>
-            <span>Expert Workers</span>
+            <strong class="number" data-number="4">0</strong>
+            <span>Barbers</span>
           </div>
         </div>
       </div>
       <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
         <div class="block-18">
           <div class="text">
-            <strong class="number" data-number="1000">0</strong>
-            <span>Happy Customers</span>
+            <strong class="number" data-number="35 to 50">0</strong>
+            <span>Customers every day</span>
           </div>
         </div>
       </div>

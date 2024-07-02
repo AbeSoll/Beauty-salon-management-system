@@ -4,7 +4,7 @@
         <div class="col-md-12 text-center">
 
           <p class="mb-0">
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Beauty Salon Management System 
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Mankraft Barbershop Management System 
           </p>
           </div>
         </div>
