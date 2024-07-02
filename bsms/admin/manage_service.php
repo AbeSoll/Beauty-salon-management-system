@@ -92,7 +92,8 @@ include('includes/dbconnection.php');
                         <td><?php echo htmlentities(number_format($row['Cost'], 0, '.', ','));?></td>
                         <td><?php  echo $row['CreationDate'];?></td> 
                         <td>
-                         <a href="#"  class=" edit_data" id="<?php echo  $row['ID']; ?>" title="click for edit">Edit</i></a>
+                          <a href="#" class="btn btn-sm btn-primary edit_data" id="<?php echo $row['ID']; ?>" title="click for edit">Edit</a>
+                          <a href="#" class="btn btn-sm btn-danger delete_data" id="<?php echo $row['ID']; ?>" title="click for delete">Delete</a>
                         </td>
                       </tr>   
                       <?php 
@@ -139,6 +140,24 @@ include('includes/dbconnection.php');
           $("#editData").modal('show');
         }
       });
+    });
+
+    $(document).on('click','.delete_data',function(){
+      var del_id=$(this).attr('id');
+      if(confirm("Are you sure you want to delete this service?")) {
+        $.ajax({
+          url:"delete_service.php",
+          type:"post",
+          data:{del_id:del_id},
+          success:function(data){
+            if(data == "success"){
+              location.reload();
+            } else {
+              alert("Failed to delete the service.");
+            }
+          }
+        });
+      }
     });
   });
 </script>
