@@ -58,7 +58,7 @@
 </div>
 </div>
 </section>
-
+<!--
 <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/services-4.jpg);" data-stellar-background-ratio="0.5">
  <div class="container">
   <div class="row d-md-flex align-items-center justify-content-center">
@@ -101,7 +101,7 @@
 </div>
 </div>
 </section>
-
+!-->
 <section class="ftco-section ftco-no-pt ftco-no-pb ftco-intro bg-primary">
  <div class="container py-5">
   <div class="row py-2">
