@@ -43,7 +43,7 @@ if(isset($_GET['blockid']))
          <td class="text-left" ><?php  echo htmlentities($row->email);?></td>
          <td class="text-left"><?php  echo htmlentities($row->permission);?></td>
          <td class="text-left">
-           <a href="blockedusers.php?blockid=<?php echo ($row->id);?>" onclick="return confirm('Do you really want to unblock user ?');" title="Restore this User">unblock</i></a>
+           <a class="btn btn-sm btn-danger" href="blockedusers.php?blockid=<?php echo ($row->id);?>" onclick="return confirm('Do you really want to unblock user ?');" title="Restore this User">unblock</i></a>
          </td>
        </tr>
        <?php 

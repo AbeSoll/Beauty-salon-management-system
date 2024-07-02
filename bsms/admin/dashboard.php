@@ -101,129 +101,142 @@ if (strlen($_SESSION['sid']==0)) {
                         <!-- ./col -->
                     </div>
                     <!-- /.row (main row) -->
-                    <!-- Small boxes (Stat box) -->
-                    <div class="row">
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-primary">
-                                <?php
-                                 //todays sale
-                                $query6=mysqli_query($con,"select tblinvoice.ServiceId as ServiceId, tblservices.Cost
-                                   from tblinvoice 
-                                   join tblservices  on tblservices.ID=tblinvoice.ServiceId where date(PostingDate)=CURDATE();");
-                                while($row=mysqli_fetch_array($query6))
-                                {
-                                    $todays_sale=$row['Cost'];
-                                    $todysale+=$todays_sale;
+                    <!-- Small boxes (Stat box) --><div class="row">
+    <!--
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-primary">
+            <?php
+            /*
+            // Todays sale
+            $query6=mysqli_query($con,"select tblinvoice.ServiceId as ServiceId, tblservices.Cost
+               from tblinvoice 
+               join tblservices  on tblservices.ID=tblinvoice.ServiceId where date(PostingDate)=CURDATE();");
+            while($row=mysqli_fetch_array($query6))
+            {
+                $todays_sale=$row['Cost'];
+                $todysale+=$todays_sale;
+            }
+            */
+            ?>
+            <div class="inner">
+                <h3>
+                    <?php
+                    /*
+                    $pop=0;
+                    if (strlen($todysale==0)) {
+                        echo $pop;
+                    } else{ 
+                        echo $todysale ; 
+                    }
+                    */
+                    ?>
+                </h3>
+                <p>Today Sales</p>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    -->
 
-                                }
-                                ?>
-                                <div class="inner">
-                                    <h3>
-                                        <?php
-                                        $pop=0;
-                                        if (strlen($todysale==0)) {
-                                            echo $pop;
-                                        } else{ 
-                                            echo $todysale ; 
-                                        }
-                                        ?>
+    <!--
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-primary">
+            <?php
+            /*
+            // Yesterday's sale
+            $query7=mysqli_query($con,"select tblinvoice.ServiceId as ServiceId, tblservices.Cost
+             from tblinvoice 
+             join tblservices  on tblservices.ID=tblinvoice.ServiceId where date(PostingDate)=CURDATE()-1;");
+            while($row7=mysqli_fetch_array($query7))
+            {
+                $yesterdays_sale=$row7['Cost'];
+                $yesterdaysale+=$yesterdays_sale;
+            }
+            */
+            ?>
+            <div class="inner">
+                <h3>
+                    <?php
+                    /*
+                    $pop1=0;
+                    if (strlen($yesterdaysale==0)) {
+                        echo $pop1;
+                    } else{ 
+                        echo $yesterdaysale; 
+                    }
+                    */
+                    ?>
+                </h3>
 
-                                    </h3>
-                                    <p>Today Sales</p>
-                                </div>
-                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-primary">
-                                <?php
-                                //Yesterday's sale
-                                $query7=mysqli_query($con,"select tblinvoice.ServiceId as ServiceId, tblservices.Cost
-                                 from tblinvoice 
-                                 join tblservices  on tblservices.ID=tblinvoice.ServiceId where date(PostingDate)=CURDATE()-1;");
-                                while($row7=mysqli_fetch_array($query7))
-                                {
-                                    $yesterdays_sale=$row7['Cost'];
-                                    $yesterdaysale+=$yesterdays_sale;
+                <p>Yesterday Sales</p>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    -->
 
-                                }
-                                ?>
-                                <div class="inner">
-                                    <h3>
-                                        <?php
-                                        $pop1=0;
-                                        if (strlen($yesterdaysale==0)) {
-                                            echo $pop1;
-                                        } else{ 
-                                            echo $yesterdaysale; 
-                                        }?>
-                                    </h3>
+    <!--
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-primary">
+            <?php
+            /*
+            // Last Sevendays Sale
+            $query8=mysqli_query($con,"select tblinvoice.ServiceId as ServiceId, tblservices.Cost
+             from tblinvoice 
+             join tblservices  on tblservices.ID=tblinvoice.ServiceId where date(PostingDate)>=(DATE(NOW()) - INTERVAL 7 DAY);");
+            while($row8=mysqli_fetch_array($query8))
+            {
+                $sevendays_sale=$row8['Cost'];
+                $tseven+=$sevendays_sale;
+            }
+            */
+            ?>
+            <div class="inner">
+                <h3>
+                    <?php
+                    /*
+                    $pop2=0;
+                    if (strlen($tseven==0)) {
+                        echo $pop2;
+                    } else{ 
+                        echo $tseven;
+                    }
+                    */
+                    ?> 
+                </h3>
+                <p>Last seven days</p>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    -->
 
-                                    <p>Yesterday Sales</p>
-                                </div>
-                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-primary">
-                                <?php
-                                 //Last Sevendays Sale
-                                $query8=mysqli_query($con,"select tblinvoice.ServiceId as ServiceId, tblservices.Cost
-                                 from tblinvoice 
-                                 join tblservices  on tblservices.ID=tblinvoice.ServiceId where date(PostingDate)>=(DATE(NOW()) - INTERVAL 7 DAY);");
-                                while($row8=mysqli_fetch_array($query8))
-                                {
-                                    $sevendays_sale=$row8['Cost'];
-                                    $tseven+=$sevendays_sale;
+    <!--
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-primary">
+            <?php
+            /*
+            // Total Sale
+            $query9=mysqli_query($con,"select tblinvoice.ServiceId as ServiceId, tblservices.Cost
+             from tblinvoice 
+             join tblservices  on tblservices.ID=tblinvoice.ServiceId");
+            while($row9=mysqli_fetch_array($query9))
+            {
+                $total_sale=$row9['Cost'];
+                $totalsale+=$total_sale;
+            }
+            */
+            ?>
+            <div class="inner">
+                <h3> // echo htmlentities(number_format($totalsale, 0, '.', ','));?></h3>
+                <p>Total Sales</p>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    -->
+</div>
 
-                                }
-                                ?>
-                                <div class="inner">
-                                    <h3>
-                                       <?php
-                                       $pop2=0;
-                                       if (strlen($tseven==0)) {
-                                        echo $pop2;
-                                    } else{ 
-                                        echo $tseven;
-                                    }
-                                    ?> 
-                                </h3>
-
-                                <p>Last seven days</p>
-                            </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-lg-3 col-6">
-                        <!-- small box -->
-                        <div class="small-box bg-primary">
-                            <?php
-                            //Total Sale
-                            $query9=mysqli_query($con,"select tblinvoice.ServiceId as ServiceId, tblservices.Cost
-                             from tblinvoice 
-                             join tblservices  on tblservices.ID=tblinvoice.ServiceId");
-                            while($row9=mysqli_fetch_array($query9))
-                            {
-                                $total_sale=$row9['Cost'];
-                                $totalsale+=$total_sale;
-
-                            }
-                            ?>
-                            <div class="inner">
-                                <h3><?php echo htmlentities(number_format($totalsale, 0, '.', ','));?></h3>
-
-                                <p>Total Sales</p>
-                            </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
                     <!-- ./col -->
                 </div>
                 <!-- /.row (main row) -->

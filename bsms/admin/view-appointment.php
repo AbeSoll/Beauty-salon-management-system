@@ -141,7 +141,7 @@ if (strlen($_SESSION['sid']==0)) {
                               <th>Status :</th>
                               <td>
                                <select name="status" class="form-control wd-450" required="true" >
-                                 <option value="1" selected="true">Selected</option>
+                                 <option value="1" selected="true">Accepted</option>
                                  <option value="2">Rejected</option>
                                </select></td>
                              </tr>
