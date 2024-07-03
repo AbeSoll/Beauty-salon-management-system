@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2024 at 04:39 PM
+-- Generation Time: Jul 03, 2024 at 03:48 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.28
 
@@ -171,9 +171,9 @@ CREATE TABLE `tblusers` (
 --
 
 INSERT INTO `tblusers` (`id`, `name`, `lastname`, `username`, `email`, `sex`, `permission`, `password`, `mobile`, `userimage`, `status`) VALUES
-(15, 'Ilham', 'Shah', 'admin', 'ilham@gmail.com', 'Male', 'Manager', '81dc9bdb52d04dc20036dbd8313ed055', 770546590, 'ilham.png', 1),
+(15, 'Ilham', 'Shah', 'admin', 'ilham@gmail.com', 'Male', 'Manager', '81dc9bdb52d04dc20036dbd8313ed055', 770546590, 'ilham-modified.png', 1),
 (21, 'Arinaitwe', 'Gerald', 'gerald', 'gerald@gmail.com', 'Male', 'Admin', '81dc9bdb52d04dc20036dbd8313ed055', 770546590, 'but.jpg', 0),
-(22, 'AHMAD SOLEHIN', 'BIN ASMADI', 'solehin', 'solehinahmad954@gmail.com', 'Male', 'Staff/Barber', '81dc9bdb52d04dc20036dbd8313ed055', 177353011, 'sollll.png', 1);
+(22, 'AHMAD SOLEHIN', 'BIN ASMADI', 'solehin', 'solehinahmad954@gmail.com', 'Male', 'Staff/Barber', '81dc9bdb52d04dc20036dbd8313ed055', 177353011, 'sollll-modified.png', 1);
 
 --
 -- Indexes for dumped tables
