@@ -128,8 +128,10 @@ if(isset($_GET['delid']))
                 <div class="card-header">
                   <h3 class="card-title">Register New user</h3>
                   <div class="card-tools">
+                  <?php if ($_SESSION['user_permission'] == 'Manager') { ?>
                    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete" ></i> See blocked users
                    </button>
+                   <?php } ?>
                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#deposit" ><i class="fas fa-plus" ></i> Register New User
                    </button>
                  </div>
@@ -237,8 +239,12 @@ if(isset($_GET['delid']))
                           <td class="text-left" ><?php  echo htmlentities($row->email);?></td>
                           <td class="text-left"><?php  echo htmlentities($row->permission);?></td>
                           <td class="text-left">
+                            <center>
                            <a class="btn btn-sm btn-primary edit_data" id="<?php echo  ($row->id); ?>" title="click for edit"><i class="fas fa-edit"></i></a>
+                           <?php if ($_SESSION['user_permission'] == 'Manager') { ?>
                            <a class="btn btn-sm btn-danger" href="userregister.php?delid=<?php echo ($row->id);?>" title="click for block" onclick="return confirm('sure to block ?')" >Block</i></a>
+                           <?php } ?>
+                           </center>
                          </td>
                        </tr>
 
