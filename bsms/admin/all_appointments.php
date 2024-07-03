@@ -74,7 +74,9 @@ if (strlen($_SESSION['sid']==0)) {
                       <tr> 
                         <th>#</th> 
                         <th> Appointment Number</th> 
-                        <th>Name</th><th>Mobile Number</th> 
+                        <th>Name</th>
+                        <th>Mobile Number</th> 
+                        <th>Barber Selected</th>
                         <th>Appointment Date</th>
                         <th>Appointment Time</th>
                         <th>Action</th> 
@@ -93,6 +95,7 @@ if (strlen($_SESSION['sid']==0)) {
                           <td><?php  echo $row['AptNumber'];?></td> 
                           <td><?php  echo $row['Name'];?></td>
                           <td><?php  echo $row['PhoneNumber'];?></td>
+                          <td><?php  echo $row['BarberName'];?></td>
                           <td><?php  echo $row['AptDate'];?></td> 
                           <td><?php  echo $row['AptTime'];?></td> 
                           <td><a href="#" class="btn btn-sm btn-primary edit_data" id="<?php echo  $row['ID']; ?>" title="click for edit">View</a></td> 
