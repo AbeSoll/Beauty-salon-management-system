@@ -7,12 +7,13 @@ if(isset($_POST['login']))
 {
   $username=$_POST['username'];
   $password=md5($_POST['password']);
-  $sql ="SELECT * FROM tblusers WHERE username=:username and Password=:password ";
+  $sql ="SELECT * FROM tblusers WHERE username=:username AND Password=:password AND status=1";
   $query=$dbh->prepare($sql);
   $query-> bindParam(':username', $username, PDO::PARAM_STR);
   $query-> bindParam(':password', $password, PDO::PARAM_STR);
   $query-> execute();
   $results=$query->fetchAll(PDO::FETCH_OBJ);
+  
   if($query->rowCount() > 0)
   {
     foreach ($results as $result) {
@@ -33,16 +34,17 @@ if(isset($_POST['login']))
     } else {
       if(isset($_COOKIE["user_login"])) {
         setcookie ("user_login","");
-        if(isset($_COOKIE["userpassword"])) {
-          setcookie ("userpassword","");
-        }
+      }
+      if(isset($_COOKIE["userpassword"])) {
+        setcookie ("userpassword","");
       }
     }
-  }else{
-    echo "<script>alert('Invalid Details');</script>";
+  } else {
+    echo "<script>alert('Invalid Details or User is Blocked');</script>";
   }
 }
 ?>
+
 
 <?php @include("includes/head.php"); ?>
 <body class="hold-transition login-page">
