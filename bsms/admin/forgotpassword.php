@@ -49,7 +49,7 @@ if(isset($_POST['login']))
       <div class="card-body login-card-body">
 
         <div class="login-logo">
-          <center><img src="company/salon.png" width="150" height="130" class="user-image" alt="User Image"/></center>
+          <center><img src="company/salon.png" width="120" height="120" class="user-image" alt="User Image"/></center>
         </div>
         <p class="login-box-msg"><strong style="color: blue">Don't worry, we'have got you back</strong></p>
         <form action="" method="post">
@@ -87,7 +87,7 @@ if(isset($_POST['login']))
           </div>
           <div class="row">
             <div class="col-4">
-              <button type="submit" name="login" class="btn btn-primary btn-block" data-toggle="modal" data-taget="#modal-default">Reset</button>
+            <button type="submit" name="login" class="btn btn-primary btn-block" data-toggle="modal" data-taget="#modal-default">Reset</button>
             </div>
             <!-- /.col -->
           </div>

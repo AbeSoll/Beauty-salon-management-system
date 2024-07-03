@@ -32,7 +32,7 @@ if(isset($_POST['submit']))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Mankraft Management System</title>
+	<title>Mankraft Barbershop Booking System</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -276,7 +276,6 @@ if(isset($_POST['submit']))
 			</div>
 		</div>
 	</section>
-
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-intro bg-primary">
 		<div class="container py-5">
 			<div class="row py-2">
