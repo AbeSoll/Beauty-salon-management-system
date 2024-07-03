@@ -241,7 +241,7 @@ if(isset($_GET['delid']))
                           <td class="text-left"><?php  echo htmlentities($row->permission);?></td>
                           <td class="text-left">
                             <center>
-                          <a class="edit_data" id="<?php echo  ($row->id); ?>" title="click for edit"><i class="fas fa-edit"></i></a>
+                          <a href="#" class="btn btn-sm btn-primary edit_data" id="<?php echo  ($row->id); ?>" title="click for edit"><i class="fas fa-edit"></i></a>
                            <?php if ($_SESSION['user_permission'] == 'Manager') { ?> 
                            <a class="btn btn-sm btn-danger" href="userregister.php?delid=<?php echo ($row->id);?>" title="click for block" onclick="return confirm('sure to block ?')" >Block</i></a>
                            <a href="#" class="btn btn-sm btn-danger delete_user" data-id="<?php echo ($row->id);?>" title="click to delete">Delete</a>
