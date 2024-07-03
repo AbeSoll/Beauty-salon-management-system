@@ -44,6 +44,10 @@ if(isset($_POST['save2']))
         <td><?php  echo $row['Email'];?></td>
       </tr>
       <tr>
+          <th>Barber Name</th>
+          <td><?php  echo $row['BarberName'];?></td>
+          </tr>
+      <tr>
         <th>Mobile Number</th>
         <td><?php  echo $row['PhoneNumber'];?></td>
       </tr>

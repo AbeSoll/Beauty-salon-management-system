@@ -7,13 +7,15 @@ if(isset($_POST['submit']))
 
 	$name=$_POST['name'];
 	$email=$_POST['email'];
+	$users=$_POST['users'];
 	$services=$_POST['services'];
 	$adate=$_POST['adate'];
 	$atime=$_POST['atime'];
 	$phone=$_POST['phone'];
 	$aptnumber = mt_rand(100000000, 999999999);
 
-	$query=mysqli_query($con,"insert into tblappointment(AptNumber,Name,Email,PhoneNumber,AptDate,AptTime,Services) value('$aptnumber','$name','$email','$phone','$adate','$atime','$services')");
+
+	$query=mysqli_query($con,"insert into tblappointment(AptNumber,Name,Email,BarberName,PhoneNumber,AptDate,AptTime,Services) value('$aptnumber','$name','$email','$users','$phone','$adate','$atime','$services')");
 	if ($query) 
 	{
 		echo "<script>alert('Thank you for booking, your appointment number is $aptnumber, we will give you phone call shortly.');</script>";  		
@@ -144,6 +146,23 @@ if(isset($_POST['submit']))
 													<?php
 												} ?> 
 											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="form-field">
+										<div class="select-wrap">
+											<div class="icon"><span class="fa fa-chevron-down"></span></div>
+											<select name="users" id="users" class="form-control" required>
+                                            	<option value="">Select Barber</option>
+                                            	<?php 
+                                            	$query=mysqli_query($con,"select * from tblusers where permission='Staff/Barber'");
+                                            	while($row=mysqli_fetch_array($query)) { ?>
+                                            	<option style="color: red;" value="<?php echo $row['name'];?>"><?php echo $row['name'];?></option>
+                                            	<?php } ?> 
+                                        	</select>
 										</div>
 									</div>
 								</div>

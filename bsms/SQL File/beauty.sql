@@ -32,6 +32,7 @@ CREATE TABLE `tblappointment` (
   `AptNumber` varchar(80) DEFAULT NULL,
   `Name` varchar(120) DEFAULT NULL,
   `Email` varchar(120) DEFAULT NULL,
+  `BarberName` varchar(255) DEFAULT NULL,
   `PhoneNumber` bigint(11) DEFAULT NULL,
   `AptDate` varchar(120) DEFAULT NULL,
   `AptTime` varchar(120) DEFAULT NULL,
