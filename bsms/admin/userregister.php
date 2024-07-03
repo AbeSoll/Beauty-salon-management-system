@@ -17,6 +17,7 @@ if(isset($_GET['delid']))
 }
 ?>
 <?php @include("includes/head.php"); ?>
+
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
     <!-- Navbar -->
@@ -240,9 +241,12 @@ if(isset($_GET['delid']))
                           <td class="text-left"><?php  echo htmlentities($row->permission);?></td>
                           <td class="text-left">
                             <center>
-                           <a class="btn btn-sm btn-primary edit_data" id="<?php echo  ($row->id); ?>" title="click for edit"><i class="fas fa-edit"></i></a>
-                           <?php if ($_SESSION['user_permission'] == 'Manager') { ?>
+                           <a class="btn btn-sm btn-primary edit_data" id="<?php echo  ($row->id); ?>" title="click for edit">
+                           <?php if ($_SESSION['user_permission'] == 'Manager') { ?> 
+                           <i class="fas fa-edit"></i></a>
+                           
                            <a class="btn btn-sm btn-danger" href="userregister.php?delid=<?php echo ($row->id);?>" title="click for block" onclick="return confirm('sure to block ?')" >Block</i></a>
+                           <a href="#" class="btn btn-sm btn-danger delete_user" data-id="<?php echo ($row->id);?>" title="click to delete">Delete</a>
                            <?php } ?>
                            </center>
                          </td>
@@ -294,7 +298,31 @@ if(isset($_GET['delid']))
       });
     });
   });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.delete_user').on('click', function(){
+        var delete_id = $(this).data('id');
+        if(confirm('Are you sure you want to delete this user?')) {
+          $.ajax({
+            url: 'delete_users.php',
+            type: 'POST',
+            data: {delete_id: delete_id},
+            success: function(response){
+              alert(response);
+              window.location.href = 'userregister.php';
+            },
+            error: function(xhr, status, error) {
+              console.error(xhr);
+            }
+          });
+        }
+      });
+    });
 </script>
+
+
 </body>
 </html>
 

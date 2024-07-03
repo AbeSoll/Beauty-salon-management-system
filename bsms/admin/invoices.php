@@ -93,7 +93,7 @@ include('includes/dbconnection.php');
                         <td><?php  echo $row['BillingId'];?></td>
                         <td><?php  echo $row['Name'];?></td>
                         <td><?php  echo $row['PostingDate'];?></td> 
-                        <td><a href="#"  class="btn btn-sm btn-primary edit_data" id="<?php echo  $row['BillingId']; ?>" title="click to view">View</a></td> 
+                        <td><center><a href="#"  class="btn btn-sm btn-primary edit_data" id="<?php echo  $row['BillingId']; ?>" title="click to view">View</a></center></td> 
 
                         </tr>   <?php 
                         $cnt=$cnt+1;

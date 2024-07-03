@@ -92,8 +92,10 @@ include('includes/dbconnection.php');
                         <td><?php echo htmlentities(number_format($row['Cost'], 0, '.', ','));?></td>
                         <td><?php  echo $row['CreationDate'];?></td> 
                         <td>
+                        <center>
                           <a href="#" class="btn btn-sm btn-primary edit_data" id="<?php echo $row['ID']; ?>" title="click for edit">Edit</a>
                           <a href="#" class="btn btn-sm btn-danger delete_data" id="<?php echo $row['ID']; ?>" title="click for delete">Delete</a>
+                        </center>
                         </td>
                       </tr>   
                       <?php 

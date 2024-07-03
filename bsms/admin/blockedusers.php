@@ -43,8 +43,11 @@ if(isset($_GET['blockid']))
          <td class="text-left" ><?php  echo htmlentities($row->email);?></td>
          <td class="text-left"><?php  echo htmlentities($row->permission);?></td>
          <td class="text-left">
+          <center>
            <a class="btn btn-sm btn-danger" href="blockedusers.php?blockid=<?php echo ($row->id);?>" onclick="return confirm('Do you really want to unblock user ?');" title="Restore this User">unblock</i></a>
-         </td>
+           <a href="#" class="btn btn-sm btn-danger delete_user" data-id="<?php echo ($row->id);?>" title="click to delete">Delete</a>
+          </center>
+          </td>
        </tr>
        <?php 
      }
@@ -53,4 +56,25 @@ if(isset($_GET['blockid']))
 </table>
 </div>
 <!-- /.card-body -->
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.delete_user').on('click', function(){
+        var delete_id = $(this).data('id');
+        if(confirm('Are you sure you want to delete this user?')) {
+          $.ajax({
+            url: 'delete_users.php',
+            type: 'POST',
+            data: {delete_id: delete_id},
+            success: function(response){
+              alert(response);
+              window.location.href = 'userregister.php';
+            },
+            error: function(xhr, status, error) {
+              console.error(xhr);
+            }
+          });
+        }
+      });
+    });
+</script>
