@@ -9,7 +9,7 @@ if (strlen($_SESSION['sid']==0))
 {
   if(isset($_POST['submit']))
   {
-    $adminid=$_SESSION['cpmsaid'];
+    $adminid=$_SESSION['sid'];
     $cpassword=md5($_POST['password']);
     $newpassword=md5($_POST['password1']);
     $sql ="SELECT id FROM tblusers WHERE id=:adminid and Password=:cpassword";
@@ -28,6 +28,7 @@ if (strlen($_SESSION['sid']==0))
       $chngpwd1->execute();
 
       echo '<script>alert("Your password successully changed")</script>';
+      echo '<script>window.location.href = "changepassword.php";</script>';
     } else {
       echo '<script>alert("Your current password is wrong")</script>';
 

@@ -67,11 +67,11 @@ if (strlen($_SESSION['sid']==0)) {
                   <div class="card-body">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Service Name</label>
-                      <input type="text" class="form-control" id="sername" name="sername" placeholder="Enter service name">
+                      <input type="text" class="form-control" id="sername" name="sername" placeholder="Enter service name" required="true">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Cost</label>
-                      <input type="text" class="form-control" id="cost" name="cost" placeholder="cost">
+                      <input type="text" class="form-control" id="cost" name="cost" placeholder="cost" required="true">
                     </div>
                   </div>
                   <!-- /.card-body -->

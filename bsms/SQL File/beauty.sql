@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2024 at 09:42 AM
+-- Generation Time: Jul 04, 2024 at 05:38 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -48,7 +48,7 @@ CREATE TABLE `tblappointment` (
 --
 
 INSERT INTO `tblappointment` (`ID`, `AptNumber`, `Name`, `Email`, `BarberName`, `PhoneNumber`, `AptDate`, `AptTime`, `Services`, `ApplyDate`, `Remark`, `Status`, `RemarkDate`) VALUES
-(29, '530816472', 'harith', 'harith@gmail.com', 'Hafizuddin', 177587549, '7/23/2024', '12:00pm', 'Waxing and Hair Removal', '2024-07-03 06:29:16', '', '', '0000-00-00 00:00:00');
+(29, '530816472', 'harith', 'harith@gmail.com', 'Hafizuddin', 177587549, '7/23/2024', '12:00pm', 'Waxing and Hair Removal', '2024-07-03 06:29:16', 'ok', '2', '2024-07-04 03:29:11');
 
 -- --------------------------------------------------------
 
@@ -72,7 +72,7 @@ CREATE TABLE `tblcustomers` (
 --
 
 INSERT INTO `tblcustomers` (`ID`, `Name`, `Email`, `MobileNumber`, `Gender`, `Details`, `CreationDate`, `UpdationDate`) VALUES
-(2, 'Don Williams', 'williams@gmail.com', 5565565656, 'Male', 'from Canada', '2019-07-26 11:10:02', '2021-07-09 15:11:10'),
+(2, 'Don Williams', 'williams@gmail.com', 174988998, 'Male', 'from Canada', '2019-07-26 11:10:02', '2024-07-04 11:25:02'),
 (3, 'Tracy Peace', 'peace@gmail.com', 789465990, 'Female', 'Taking massage', '2019-07-26 11:10:28', '2021-07-09 15:35:28'),
 (4, ' Jain Gloria', 'gloria@gmail.com', 5646464646, 'Female', 'from California', '2019-08-19 13:38:58', '2021-07-09 15:12:19');
 
@@ -165,10 +165,10 @@ CREATE TABLE `tblusers` (
 --
 
 INSERT INTO `tblusers` (`id`, `name`, `lastname`, `username`, `email`, `sex`, `permission`, `password`, `mobile`, `userimage`, `status`) VALUES
-(15, 'Ilham', 'Shah', 'admin', 'ilham@gmail.com', 'Male', 'Manager', '81dc9bdb52d04dc20036dbd8313ed055', 770546590, 'ilham-modified.png', 1),
+(15, 'Ilham', 'Shah  ', 'admin', 'ilham@gmail.com', 'Male', 'Manager', '827ccb0eea8a706c4c34a16891f84e7b', 177656565, 'ilham-modified.png', 1),
 (23, 'Solehin', 'Asmadi', 'solehin', 'solehinahmad954@gmail.com', 'Male', 'Staff/Barber', '81dc9bdb52d04dc20036dbd8313ed055', 177587549, 'but.jpg', 1),
 (24, 'Hafizuddin', 'Raemee', 'hafiz', 'hafizraemee7@gmail.com', 'Male', 'Staff/Barber', '81dc9bdb52d04dc20036dbd8313ed055', 177587549, 'but.jpg', 1),
-(25, 'Aiman', 'Afzan', 'Aiman', 'aiman@gmail.com', 'Male', 'Staff/Barber', '81dc9bdb52d04dc20036dbd8313ed055', 115765434, 'but.jpg', 1),
+(25, 'Aiman', 'Afzan', 'Aiman', 'aiman@gmail.com', 'Male', 'Staff/Barber', '81dc9bdb52d04dc20036dbd8313ed055', 115765434, 'but.jpg', 0),
 (26, 'Meor', 'Amir', 'Meor', 'meor@gmail.com', 'Male', 'Staff/Barber', '81dc9bdb52d04dc20036dbd8313ed055', 1867564321, 'but.jpg', 1);
 
 --
@@ -232,7 +232,7 @@ ALTER TABLE `tblinvoice`
 -- AUTO_INCREMENT for table `tblservices`
 --
 ALTER TABLE `tblservices`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `tblusers`
