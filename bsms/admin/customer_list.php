@@ -109,7 +109,7 @@ if (strlen($_SESSION['sid']==0)) {
                       <tr> 
                         <th scope="row"><?php echo $cnt; ?></th> 
                         <td><?php echo $row['Name']; ?></td> 
-                        <td><?php echo $row['MobileNumber']; ?></td>
+                        <td>0<?php echo $row['MobileNumber']; ?></td>
                         <td><?php echo $row['CreationDate']; ?></td> 
                         <td><center>
                           <a href="#" class="btn btn-sm btn-primary edit_data" id="<?php echo $row['ID']; ?>" title="click for edit">Edit</a>

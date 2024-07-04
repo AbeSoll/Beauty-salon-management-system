@@ -49,7 +49,7 @@ if(isset($_POST['save2']))
           </tr>
       <tr>
         <th>Mobile Number</th>
-        <td><?php  echo $row['PhoneNumber'];?></td>
+        <td>0<?php  echo $row['PhoneNumber'];?></td>
       </tr>
       <tr>
         <th>Appointment Date</th>

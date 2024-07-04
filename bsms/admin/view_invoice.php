@@ -27,7 +27,7 @@ include('includes/dbconnection.php');
 							<th>Name</th> 
 							<td><?php echo $row['Name']?></td> 
 							<th>Contact no.</th> 
-							<td><?php echo $row['MobileNumber']?></td>
+							<td>0<?php echo $row['MobileNumber']?></td>
 							<th>Email </th> 
 							<td><?php echo $row['Email']?></td>
 						</tr> 

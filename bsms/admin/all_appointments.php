@@ -94,7 +94,7 @@ if (strlen($_SESSION['sid']==0)) {
                           <th scope="row"><?php echo $cnt;?></th> 
                           <td><?php  echo $row['AptNumber'];?></td> 
                           <td><?php  echo $row['Name'];?></td>
-                          <td><?php  echo $row['PhoneNumber'];?></td>
+                          <td>0<?php  echo $row['PhoneNumber'];?></td>
                           <td><?php  echo $row['BarberName'];?></td>
                           <td><?php  echo $row['AptDate'];?></td> 
                           <td><?php  echo $row['AptTime'];?></td> 
