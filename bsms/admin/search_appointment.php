@@ -119,7 +119,7 @@ include('includes/dbconnection.php');
                         <th scope="row"><?php echo $cnt;?></th> 
                         <td><?php  echo $row['AptNumber'];?></td> 
                         <td><?php  echo $row['Name'];?></td>
-                        <td><?php  echo $row['PhoneNumber'];?></td>
+                        <td>0<?php  echo $row['PhoneNumber'];?></td>
                         <td><?php  echo $row['AptDate'];?></td> 
                         <td><?php  echo $row['AptTime'];?></td> 
                         <td><a href="#" class=" edit_data" id="<?php echo  $row['ID']; ?>" title="click for edit">View</a></td>  

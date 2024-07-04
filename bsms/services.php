@@ -174,7 +174,7 @@ if(isset($_POST['submit']))
                                 <tr>
                                     <th scope="row"><?php echo $cnt; ?></th>
                                     <td><?php echo $row['ServiceName']; ?></td>
-                                    <td><?php echo $row['Cost']; ?></td>
+                                    <td>RM<?php echo $row['Cost']; ?>.00</td>
                                 </tr>
                             <?php
                                 $cnt = $cnt + 1;
