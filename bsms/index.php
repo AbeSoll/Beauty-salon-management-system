@@ -32,24 +32,24 @@ if(isset($_POST['submit']))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Mankraft Barbershop Booking System</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/jquery.timepicker.css">
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/style.css">
+    <title>Mankraft Barbershop Booking System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
 
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
 	<?php include('includes/header.php') ?>
@@ -88,107 +88,15 @@ if(isset($_POST['submit']))
 		</div>
 	</section>
 
-	
-
-	<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt">
-		<div class="container">
-			<div class="row no-gutters">
-				<div class="col-sm-4 p-4 p-md-5 d-flex align-items-center justify-content-center bg-primary">
-					<form action="#" method="post" class="appointment-form">
-						<h3 class="mb-3">Book your Service</h3>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="form-group">
-									<input type="name" name="name" class="form-control" placeholder="Name"required>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<input type="email" name="email" class="form-control" placeholder="Email"required>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<input type="text" name="phone" class="form-control" placeholder="Phone"required>
-								</div>
-							</div>
-							<div class="col-md-4">
-    							<div class="form-group">
-        							<div class="input-wrap">
-            							<div class="icon"><span class="fa fa-calendar"></span></div>
-            							<input type="text" id="datepicker" name="adate" class="form-control" placeholder="Date" required>
-        							</div>
-    							</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<div class="input-wrap">
-										<div class="icon"><span class="fa fa-clock-o"></span></div>
-										<input id="timepicker" type="text" name="atime" class="form-control book_time" placeholder="Time"required>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<div class="form-field">
-										<div class="select-wrap">
-											<div class="icon"><span class="fa fa-chevron-down"></span></div>
-											<select name="services" id="services" class="form-control"required>
-												<option value="">Select Service</option>
-												<?php $query=mysqli_query($con,"select * from tblservices");
-												while($row=mysqli_fetch_array($query))
-												{
-													?>
-													<option style="color: red;" value="<?php echo $row['ServiceName'];?>" ><?php echo $row['ServiceName'];?></option>
-													<?php
-												} ?> 
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<div class="form-field">
-										<div class="select-wrap">
-											<div class="icon"><span class="fa fa-chevron-down"></span></div>
-											<select name="users" id="users" class="form-control" required>
-                                            	<option value="">Select Barber</option>
-                                            	<?php 
-                                            	$query=mysqli_query($con,"select * from tblusers where permission='Staff/Barber' and status='1'");
-                                            	while($row=mysqli_fetch_array($query)) { ?>
-                                            	<option style="color: red;" value="<?php echo $row['name'];?>"><?php echo $row['name'];?></option>
-                                            	<?php } ?> 
-                                        	</select>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<input type="submit" name="submit" value="Book Now" class="btn btn-white py-3 px-4">
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="col-sm-8 wrap-about py-5 ftco-animate img" style="background-image: url(images/stylist-3.jpg);">
-					<div class="row pb-5 pb-md-0">
-						<div class="col-md-12 col-lg-7">
-							<div class="heading-section mt-5 mb-4">
-								<div class="pl-lg-3 ml-md-5">
-									<span class="subheading">About</span>
-									<h2 class="mb-4">Welcome to Mankraft Barbershop</h2>
-								</div>
-							</div>
-							<div class="pl-lg-3 ml-md-5">
-								<p>Mankraft Barbershop is a modern and fashionable facility in a busy urban area that specializes in high-quality men's grooming services. We specialize in haircuts, beard trims, shaves, and styling, and our services are tailored to the modern man's lifestyle. Our barbershop takes pleasure in providing personalized experiences, excellent barbering techniques, and an inviting environment that makes each client feel cherished and relaxed..</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-intro bg-primary">
+    	<div class="container py-5">
+        	<div class="row py-2">
+            	<div class="col-md-12 text-center">
+                	<h2>Experience the Art of Grooming</h2>
+                	<a href="services.php" class="btn btn-white btn-outline-white">BOOK NOW<a>
+            	</div>
+        	</div>
+    	</div>
 	</section>
 
 	<section class="ftco-section ftco-intro" style="background-image: url(images/back1.jpg);">
@@ -278,7 +186,7 @@ if(isset($_POST['submit']))
 			<div class="row py-2">
 				<div class="col-md-12 text-center">
 					<h2>Your Friendly Neighbourhood Barbershop</h2>
-					<a href="services.php" class="btn btn-white btn-outline-white">Book Now</a>
+					<a href="services.php" class="btn btn-white btn-outline-white">BOOK NOW</a>
 				</div>
 			</div>
 		</div>
@@ -300,14 +208,13 @@ if(isset($_POST['submit']))
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/jquery.animateNumber.min.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
 	<script src="js/jquery.timepicker.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
-	<script>
+    <script>
         $(function() {
-            $("#datepicker").datepicker({
+            $("#datepickerr").datepickerr({
                 dateFormat: "dd-mm-yy",
                 minDate: 0,
                 showOtherMonths: true,
@@ -316,17 +223,14 @@ if(isset($_POST['submit']))
                 changeYear: true
             });
         });
-		$(document).ready(function() {
-        // Initialize timepicker with custom settings
-        $('#timepicker').timepicker({
-            // Your existing settings here
 
-            // New settings for min, max, and interval
-            minTime: '10:00am', // Minimum time
-            maxTime: '10:00pm', // Maximum time (22:00 is represented as '10:00pm' in 12-hour format)
-            step: 30, // Time interval in minutes
-        	});
-    	});
+        $(document).ready(function() {
+            $('#timepicker').timepicker({
+                minTime: '10:00am', // Minimum time
+                maxTime: '10:00pm', // Maximum time (22:00 is represented as '10:00pm' in 12-hour format)
+                step: 30, // Time interval in minutes
+            });
+        });
     </script>
 </body>
 </html>
