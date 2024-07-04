@@ -89,7 +89,7 @@ include('includes/dbconnection.php');
                       <tr>
                         <th scope="row"><?php echo $cnt;?></th> 
                         <td><?php  echo $row['ServiceName'];?></td>
-                        <td><?php echo htmlentities(number_format($row['Cost'], 0, '.', ','));?></td>
+                        <td>RM<?php echo htmlentities(number_format($row['Cost'], 0, '.', ','));?></td>
                         <td><?php  echo $row['CreationDate'];?></td> 
                         <td>
                         <center>

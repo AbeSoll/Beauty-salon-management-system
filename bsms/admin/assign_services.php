@@ -39,7 +39,7 @@ if(isset($_POST['save'])){
         <tr> 
           <th scope="row"><?php echo $cnt;?></th> 
           <td><?php  echo $row['ServiceName'];?></td> 
-          <td><?php  echo $row['Cost'];?></td> 
+          <td>RM<?php  echo $row['Cost'];?></td> 
           <td><input type="checkbox" name="sids[]" value="<?php  echo $row['ID'];?>" ></td> 
         </tr>   
         <?php 

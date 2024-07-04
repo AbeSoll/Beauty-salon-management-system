@@ -61,7 +61,7 @@ include('includes/dbconnection.php');
 						<tr>
 							<th><?php echo $cnt;?></th>
 							<td><?php echo $row['ServiceName']?></td>	
-							<td>RM<?php echo $subtotal=$row['Cost']?>.00</td>
+							<td>RM<?php echo $subtotal=$row['Cost']?></td>
 						</tr>
 						<?php 
 						$cnt=$cnt+1;
@@ -69,7 +69,7 @@ include('includes/dbconnection.php');
 					} ?>
 					<tr>
 						<th colspan="2" style="text-align:center">Grand Total</th>
-						<th>RM<?php echo $gtotal?>.00</th>
+						<th>RM<?php echo $gtotal?></th>
 					</tr>
 				</table>
 				<p style="margin-top:1%"  align="center">
